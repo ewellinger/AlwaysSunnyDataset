@@ -1,0 +1,255 @@
+                    IT'S ALWAYS SUNNY IN PHILADELPHIA DATASET CODEBOOK
+
+Good Codebooks should include:
+* Description of the study: who did it, why they did it, how they did it.
+* Sampling information: what was the population studied, how was the sample drawn, what was the response rate.
+* Technical information about the files themselves: number of observations, record length, number of records per observation, etc.
+* Structure of the data within the file: hierarchical, multiple cards, etc.
+* Details about the data: columns in which specific variables can be found, whether they are character or numeric, and if numeric, what format.
+* Text of the questions and responses: some even have how many people responded a particular way.
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+                            DESCRIPTION OF THE STUDY
+
+SUMMARY: To collect data on the Television show It's Always Sunny in Philadelphia in order to create an informative infographic or two.  And for science!
+
+Data collected by Erich Wellinger and Kevin Winn in our free-time, oftentimes aided by the consumption of a beer or several.  Due to the frequent inebriation of those collecting the data, please contact ewellinger@icloud.com with any corrections which need to be made.
+
+
+                            CODEBOOK
+------------------------
+GENERAL INFO
+------------------------
+
+Label:      Absolute Episode Number
+Variable:   AbsOrder
+Position:   1
+Type:       Numeric, Int
+Comments:   1 = S01E01
+
+
+Label:      Season Number
+Variable:   SeaNum
+Position:   2
+Type:       Numeric, Int
+Comments:   1 = S01
+
+
+Label:      Episode Number of Season
+Variable:   EpiNum
+Position:   3
+Type:       Numeric, Int
+Comments:   1 = first episode of the season
+
+
+Label:      Episode Title
+Variable:   EpiTitle
+Position:   4
+Type:       Character, String
+Comments:
+
+
+Label:      Original Air Date
+Variable:   AirDate
+Position:   5
+Type:       Date
+Comments:   August 4th, 2005 -> 2005-08-04 or maybe 04-08-2005?
+
+
+Label:      Written By
+Variable:   WritBy
+Position:   6
+Type:       Character, String
+Comments:
+            Rob McElhenney, Glenn Howerton, Charlie Day, David Hornsby, Scott Marder, Rob Rosell, Sonny Lee, Patrick Walsh, Chadd Gindin, Dave Chernin, John Chernin, Becky Mann, Audra Sielaff, Luvh Rakhe, Lance Krall, Mehar Sethi, Eric Falconer, Chris Romano, Lisa Parsons, Elijah Aron, Adam Stein, Jordan Young, Charlie Hornsby, David Benioff, D.B. Weiss, Kristi Korzec
+
+
+Label:      Directed By
+Variable:   DirBy
+Position:   7
+Type:       Character, String
+Comments:
+            Matt Shakman, Fred Savage, Daniel Attias, Randall Einhorn, Richie Keen, Jerry Levine, Todd Biermann, Rob McElhenney, John Fortenberry, Heath Cullens
+
+
+Label:      IMDB Rating
+Variable:   imdbRating
+Position:   8
+Type:       Numeric, float
+Comments:
+
+
+Label:      Single or Double Episode
+Variable:   SingleEpi
+Position:   9
+Type:       bool
+Comments:   FALSE would represent the row represents a two part episode
+
+------------------------
+CHARACTER INFO
+------------------------
+
+Label:      Presence of Dennis Reynolds
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Dee Reynolds
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Mac
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Charlie Kelly
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Frank Reynolds
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Waitress
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Matthew 'Rickety Cricket' Mara
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Artemis
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Charlie's Mom (Bonnie Kelly)
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Mac's Mom
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Mac's Dad (Luther)
+Variable:
+Position:
+Type:       bool
+Comments:   http://www.imdb.com/character/ch0130137/?ref_=ttfc_fc_cl_t15
+
+
+Label:      Presence of Liam McPoyle
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Ryan McPoyle
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Maureen Ponderosa
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Bill Ponderosa
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Attorney
+Variable:
+Position:
+Type:       bool
+Comments:   http://www.imdb.com/character/ch0272764/?ref_=ttfc_fc_cl_t16
+
+
+Label:      Presence of Ben (The Soldier)
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Margaret McPoyle
+Variable:
+Position:
+Type:       bool
+Comments:   http://www.imdb.com/character/ch0130137/?ref_=ttfc_fc_cl_t15
+
+
+Label:      Presence of Waiter
+Variable:
+Position:
+Type:       bool
+Comments:
+
+
+Label:      Presence of Carmen (the tranny)
+Variable:
+Position:
+Type:       bool
+Comments:   http://www.imdb.com/character/ch0272755/?ref_=ttfc_fc_cl_t20
+            Carmen is a male-to-female transsexual who Mac dated and was already deeply involved with before the bulge in Carmen's pants was pointed out to him. Despite Mac's embarrassment, Carmen was able to keep Mac interested by complimenting his physique and promising to undergo gender reassignment surgery.
+
+
+Label:      Presence of Charlie's Uncle Jack
+Variable:
+Position:
+Type:       bool
+Comments:   http://www.imdb.com/character/ch0194210/?ref_=ttfc_fc_cl_t21
+            Jack is Charlie's uncle, the brother of Charlie's mother, who is constantly implied to have molested Charlie as a child. Charlie's Uncle Jack is believed to be the inspiration for "Nightman," the character and subsequent musical Charlie created about a dark figure who comes at night and takes away a little boy's innocence. The boy grows up to become "Dayman," fighter of the Nightman.
+
+
+
+------------------------
+ACTIVITY INFO
+------------------------
+
+------------------------
+GANG ALLEGIANCE INFO
+------------------------

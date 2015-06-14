@@ -1,0 +1,70 @@
+                IT'S ALWAYS SUNNY IN PHILADELPHIA
+
+* Need to come up with ideas for what variables we'll be tracking and the data types (i.e. bool, bin, int, string)
+
+
+Variables:
+    * SingleEpisode
+        - Tell whether it's part of a double episode
+    * Location?
+    * Original air date
+    * Directed By
+    * Written By
+
+Could maybe keep track of if certain characters appear in the episode.  These could probably be bool values
+    * Obviously Dennis, Charlie, Mac, Dee, and Frank
+    *  (from under the bridge), Frank's brother, Lil' Kev,  Bruce Mathis, other Bruce, Dee/Dennis' Mom (Barbara Reynolds), Pop-Pop, Artemis, Gail the Snail, , Z (Dennis from under the bridge), , , Rex, Principal MacIntyre, Brad Fisher, Hwang, Schmitty, Ingrid 'Fatty Magoo' Nelson, Da' Maniac
+
+Could also keep track of activities
+    * Drugs
+        - Huffing Glue
+        - Smoking Crack
+        - Steroids
+        - Weed
+        - Other (riterall, Oxy, sedative brownie, Cocaine etc.)
+    * Drinking
+        - Beer
+        - Liquor
+        - Wine
+        - Grain Alcohol (probably just part of liquor)
+    * Scamming people
+    * D.E.N.N.I.S. system
+    * Getting drunk (explicitly seeing them getting drunk)
+        - Maybe bool, and then keep track of the number of specific kinds of drinks?
+    * Frank's vietnamese connections
+    * Charlie getting shut down by the waitress
+    * Waitress getting shut down by Dennis
+    * Night crawlers
+    * The gang stabbing each other in the back
+    * Gang threatens someone
+    * Dee referenced as a bird
+        - int
+    * Dee's car getting ruined
+    * Mac's karate skills (sound effects?)
+    * Ocular pat down
+    * T-Shirts (Kentucky shirts)
+        - Maybe breakdown by Charlie and Mac
+    * Ratio of liquor to beer (or something like that)
+    * Number of God-damnnits
+    * Charlie's illiteracy
+    * Number of times the gang threatens someone
+        - int
+    * Uncle Jack referencing hands
+    * Bird law / Charlie being a lawyer
+    * Does Frank bail the gang out?
+        - Bool
+    * Reference to Philadelphia sports team
+        - Eagles, Flyers, and Phillies
+    * Green Man
+    * Guns
+    * Eating cat food
+    * Mention Dennis' sex tapes
+    * Operation Badass
+    * Gang sings a capella
+    * Black face?
+    * Dee calls someone a turkey
+    * The gang makes it about patriotism
+    * Mention of Dayman / Nightman
+    * Breakdown of the allegiances within the gang
+    * Dennis being vain
+    * Presence of Children
