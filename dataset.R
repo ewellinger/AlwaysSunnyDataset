@@ -1,5 +1,9 @@
 # We want to impliment a hashtable in R for looking up alligences of characters given an episode
 # The list of keys will be...
+
+# for this instance we need a hash that can map to multiple keys. As such I suggest we use either google's or Apache's multimap functions. 
+# Here is a link: https://code.google.com/p/guava-libraries/wiki/NewCollectionTypesExplained#Multimap
+
 keys <- c('dee', 'dennis', 'mac', 'charlie', 'frank')
 
 # Then we would set up a map for S01E01 as follows?
