@@ -15,7 +15,7 @@ Could maybe keep track of if certain characters appear in the episode.  These co
     * Obviously Dennis, Charlie, Mac, Dee, and Frank
     *  (from under the bridge), Frank's brother, Lil' Kev,  Bruce Mathis, other Bruce, Dee/Dennis' Mom (Barbara Reynolds), Pop-Pop, Artemis, Gail the Snail, , Z (Dennis from under the bridge), , , Rex, Principal MacIntyre, Brad Fisher, Hwang, Schmitty, Ingrid 'Fatty Magoo' Nelson, Da' Maniac
 
-Could also keep track of activities
+Could also keep track of activities  //for both 'Drugs' and 'Drinking' we should record what character consumed them, and if possible, an approximation of the ammount consumed. 
     * Drugs
         - Huffing Glue
         - Smoking Crack
@@ -30,9 +30,9 @@ Could also keep track of activities
     * Scamming people
     * D.E.N.N.I.S. system
     * Getting drunk (explicitly seeing them getting drunk)
-        - Maybe bool, and then keep track of the number of specific kinds of drinks?
+        - Maybe bool, and then keep track of the number of specific kinds of drinks?  
     * Frank's vietnamese connections
-    * Charlie getting shut down by the waitress
+    * Charlie getting shut down by the waitress  // perhaps implement something simmilar to our 'team pairning' set up for this? 
     * Waitress getting shut down by Dennis
     * Night crawlers
     * The gang stabbing each other in the back
@@ -44,10 +44,10 @@ Could also keep track of activities
     * Ocular pat down
     * T-Shirts (Kentucky shirts)
         - Maybe breakdown by Charlie and Mac
-    * Ratio of liquor to beer (or something like that)
+    * Ratio of liquor to beer (or something like that) // could be handled with 'drinking/drugs' suggestion stated above'
     * Number of God-damnnits
-    * Charlie's illiteracy
-    * Number of times the gang threatens someone
+    * Charlie's illiteracy  // TODO: quantify Charlie's illiteracy
+    * Number of times the gang threatens someone // int threat should be associated with who made it / who was threatened. Possibly recorded as Tuple?
         - int
     * Uncle Jack referencing hands
     * Bird law / Charlie being a lawyer
@@ -67,4 +67,4 @@ Could also keep track of activities
     * Mention of Dayman / Nightman
     * Breakdown of the allegiances within the gang
     * Dennis being vain
-    * Presence of Children
+    * Presence of Children // with approximate age? e.g. children vs high school kids
