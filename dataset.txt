@@ -15,7 +15,7 @@ Could maybe keep track of if certain characters appear in the episode.  These co
     * Obviously Dennis, Charlie, Mac, Dee, and Frank
     *  (from under the bridge), Frank's brother, Lil' Kev,  Bruce Mathis, other Bruce, Dee/Dennis' Mom (Barbara Reynolds), Pop-Pop, Artemis, Gail the Snail, , Z (Dennis from under the bridge), , , Rex, Principal MacIntyre, Brad Fisher, Hwang, Schmitty, Ingrid 'Fatty Magoo' Nelson, Da' Maniac
 
-Could also keep track of activities  //for both 'Drugs' and 'Drinking' we should record what character consumed them, and if possible, an approximation of the ammount consumed. 
+Could also keep track of activities  //for both 'Drugs' and 'Drinking' we should record what character consumed them, and if possible, an approximation of the amount consumed.
     * Drugs
         - Huffing Glue
         - Smoking Crack
@@ -30,9 +30,9 @@ Could also keep track of activities  //for both 'Drugs' and 'Drinking' we should
     * Scamming people
     * D.E.N.N.I.S. system
     * Getting drunk (explicitly seeing them getting drunk)
-        - Maybe bool, and then keep track of the number of specific kinds of drinks?  
+        - Maybe bool, and then keep track of the number of specific kinds of drinks?
     * Frank's vietnamese connections
-    * Charlie getting shut down by the waitress  // perhaps implement something simmilar to our 'team pairning' set up for this? 
+    * Charlie getting shut down by the waitress  // perhaps implement something simmilar to our 'team pairning' set up for this?
     * Waitress getting shut down by Dennis
     * Night crawlers
     * The gang stabbing each other in the back

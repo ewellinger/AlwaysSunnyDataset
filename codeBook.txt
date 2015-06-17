@@ -22,6 +22,12 @@ SUMMARY: To collect data on the Television show It's Always Sunny in Philadelphi
 
 Data collected by Erich Wellinger and Kevin Winn in our free-time, oftentimes aided by the consumption of a beer or several.  Due to the frequent inebriation of those collecting the data, please contact ewellinger@icloud.com with any corrections which need to be made.
 
+General info concerning the show was scraped using the IMDB API (tenatively).  Scratch that... There doesn't seem to be an official imdb api...  Maybe look to thetvdb instead?
+
+Activity and Character info will be recorded on a per episode basis (tentatively).
+
+Allegiance info will be recorded dynamically as an episode progresses with an associated timestamp.  The state of the gang allegiances will be recorded using boolean values, which will in turn be used to create hash-maps when analysis is done.
+
 
                             CODEBOOK
 ------------------------
