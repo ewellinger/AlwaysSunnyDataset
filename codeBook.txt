@@ -23,6 +23,11 @@ SUMMARY: To collect data on the Television show It's Always Sunny in Philadelphi
 Data collected by Erich Wellinger and Kevin Winn in our free-time, oftentimes aided by the consumption of a beer or several.  Due to the frequent inebriation of those collecting the data, please contact ewellinger@icloud.com with any corrections which need to be made.
 
 General info concerning the show was scraped using the IMDB API (tenatively).  Scratch that... There doesn't seem to be an official imdb api...  Maybe look to thetvdb instead?
+    * Actually we can access the IMDB through the OMDB API (www.omdbapi.com)
+    * Sample call for the first episode of the first season which will return JSON formatted response
+        - http://www.omdbapi.com/?t=It's%20Always%20Sunny%20in%20Philadelphia&Season=1&Episode=1
+    * This seems pretty sweet, just need to figure out how to have it systematically go though and get responses for each episode
+
 
 Activity and Character info will be recorded on a per episode basis (tentatively).
 
@@ -85,18 +90,33 @@ Comments:
             Matt Shakman, Fred Savage, Daniel Attias, Randall Einhorn, Richie Keen, Jerry Levine, Todd Biermann, Rob McElhenney, John Fortenberry, Heath Cullens
 
 
+Label:      Plot
+Variable:   EpiPlot
+Position:   8
+Type:       Character, String
+Comments:
+
+
 Label:      IMDB Rating
 Variable:   imdbRating
-Position:   8
+Position:   9
 Type:       Numeric, float
 Comments:
 
 
-Label:      Single or Double Episode
-Variable:   SingleEpi
-Position:   9
-Type:       bool
-Comments:   FALSE would represent the row represents a two part episode
+Label:      IMDB Votes
+Variable:   imdbVotes
+Position:   10
+Type:       Numeric, int
+Comments:
+            * This is the number of votes which contributed to the IMDB Rating that this episode has
+
+
+Label:      Episode Runtime
+Variable:   EpiLength
+Position:   11
+Type:       int
+Comments:   Integer value of the number of minutes for the episode
 
 ------------------------
 CHARACTER INFO

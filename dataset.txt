@@ -68,3 +68,14 @@ Could also keep track of activities  //for both 'Drugs' and 'Drinking' we should
     * Breakdown of the allegiances within the gang
     * Dennis being vain
     * Presence of Children // with approximate age? e.g. children vs high school kids
+
+
+
+EXAMPLE CALL TO OMDB:
+Always Sunny IMDB ID = tt0472954
+
+http://www.omdbapi.com/?i=tt0472954&Season=1&Episode=1
+    * This appears to just get the general information, nothing concerning that specific episode...
+
+http://www.omdbapi.com/?t=It's%20Always%20Sunny%20in%20Philadelphia&Season=1&Episode=1
+It's Always Sunny in Philadelphia
