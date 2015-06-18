@@ -22,22 +22,21 @@ SUMMARY: To collect data on the Television show It's Always Sunny in Philadelphi
 
 Data collected by Erich Wellinger and Kevin Winn in our free-time, oftentimes aided by the consumption of a beer or several.  Due to the frequent inebriation of those collecting the data, please contact ewellinger@icloud.com with any corrections which need to be made.
 
-General info concerning the show was scraped using the IMDB API (tenatively).  Scratch that... There doesn't seem to be an official imdb api...  Maybe look to thetvdb instead?
-    * Actually we can access the IMDB through the OMDB API (www.omdbapi.com)
-    * Sample call for the first episode of the first season which will return JSON formatted response
-        - http://www.omdbapi.com/?t=It's%20Always%20Sunny%20in%20Philadelphia&Season=1&Episode=1
-    * This seems pretty sweet, just need to figure out how to have it systematically go though and get responses for each episode
+General info concerning the show was scraped using the OMDB API (www.omdbapi.com) and is contained in the generalInfo.csv file
 
+Activity and Character info will be recorded on a per episode basis and stored in activityInfo.csv and characterInfo.csv, respectively (tentatively).
 
-Activity and Character info will be recorded on a per episode basis (tentatively).
-
-Allegiance info will be recorded dynamically as an episode progresses with an associated timestamp.  The state of the gang allegiances will be recorded using boolean values, which will in turn be used to create hash-maps when analysis is done.
+Allegiance info will be recorded dynamically as an episode progresses with an associated timestamp.  The state of the gang allegiances will be recorded using boolean values, which will in turn be used to create hash-maps when analysis is done (tenatively).
+        - Still working on how best to go about recording this
 
 
                             CODEBOOK
-------------------------
+
+------------------------------------------------------------------
 GENERAL INFO
-------------------------
+------------------------------------------------------------------
+* This data table is saved to generalInfo.csv
+
 
 Label:      Absolute Episode Number
 Variable:   AbsOrder
@@ -118,164 +117,715 @@ Position:   11
 Type:       int
 Comments:   Integer value of the number of minutes for the episode
 
-------------------------
+
+
+
+------------------------------------------------------------------
 CHARACTER INFO
-------------------------
+------------------------------------------------------------------
+* This data table is saved to characterInfo.csv
+* 0 = Character is not present or referenced in the episode
+* 1 = Character is referenced
+* 2 = Character is present in the episode
 
 Label:      Presence of Dennis Reynolds
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charDennis
+Position:   2
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0023786/?ref_=ttfc_fc_cl_t2
+
 
 
 Label:      Presence of Dee Reynolds
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charDee
+Position:   3
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0023783/?ref_=ttfc_fc_cl_t4
+
 
 
 Label:      Presence of Mac
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charMac
+Position:   4
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0023784/?ref_=ttfc_fc_cl_t3
+
 
 
 Label:      Presence of Charlie Kelly
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charCharlie
+Position:   5
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0023785/?ref_=ttfc_fc_cl_t1
+
 
 
 Label:      Presence of Frank Reynolds
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charFrank
+Position:   6
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0023782/?ref_=ttfc_fc_cl_t5
+
 
 
 Label:      Presence of Waitress
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charWaitress
+Position:   7
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0110335/?ref_=ttfc_fc_cl_t6
+
 
 
 Label:      Presence of Matthew 'Rickety Cricket' Mara
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charCricket
+Position:   8
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0094326/?ref_=ttfc_fc_cl_t7
+
 
 
 Label:      Presence of Artemis
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charArtemis
+Position:   9
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0235184/?ref_=ttfc_fc_cl_t8
+
 
 
 Label:      Presence of Charlie's Mom (Bonnie Kelly)
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charBonnie
+Position:   10
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0272742/?ref_=ttfc_fc_cl_t9
+
 
 
 Label:      Presence of Mac's Mom
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charMacMom
+Position:   11
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0272757/?ref_=ttfc_fc_cl_t10
+
 
 
 Label:      Presence of Mac's Dad (Luther)
-Variable:
-Position:
-Type:       bool
+Variable:   charMacDad
+Position:   12
+Type:       0, 1, 2
 Comments:   http://www.imdb.com/character/ch0130137/?ref_=ttfc_fc_cl_t15
+
 
 
 Label:      Presence of Liam McPoyle
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charMcPoLiam
+Position:   13
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0128636/?ref_=ttfc_fc_cl_t11
+
 
 
 Label:      Presence of Ryan McPoyle
-Variable:
-Position:
-Type:       bool
-Comments:
+Variable:   charMcPoRyan
+Position:   14
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0130138/?ref_=ttfc_fc_cl_t12
 
-
-Label:      Presence of Maureen Ponderosa
-Variable:
-Position:
-Type:       bool
-Comments:
-
-
-Label:      Presence of Bill Ponderosa
-Variable:
-Position:
-Type:       bool
-Comments:
-
-
-Label:      Presence of Attorney
-Variable:
-Position:
-Type:       bool
-Comments:   http://www.imdb.com/character/ch0272764/?ref_=ttfc_fc_cl_t16
-
-
-Label:      Presence of Ben (The Soldier)
-Variable:
-Position:
-Type:       bool
-Comments:
 
 
 Label:      Presence of Margaret McPoyle
-Variable:
-Position:
-Type:       bool
+Variable:   charMcPoMarg
+Position:   15
+Type:       0, 1, 2
 Comments:   http://www.imdb.com/character/ch0130137/?ref_=ttfc_fc_cl_t15
 
 
-Label:      Presence of Waiter
-Variable:
-Position:
-Type:       bool
+
+Label:      Presence of Maureen Ponderosa
+Variable:   charPonderosaM
+Position:   16
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0418188/?ref_=ttfc_fc_cl_t13
+
+
+
+Label:      Presence of Bill Ponderosa
+Variable:   charPonderosaB
+Position:   17
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0299976/?ref_=ttfc_fc_cl_t14
+
+
+
+Label:      Presence of Attorney
+Variable:   charAttorney
+Position:   18
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0272764/?ref_=ttfc_fc_cl_t16
+
+
+
+Label:      Presence of Ben (The Soldier)
+Variable:   charBen
+Position:   19
+Type:       0, 1, 2
 Comments:
 
 
+
+Label:      Presence of Waiter
+Variable:   charWaiter
+Position:   20
+Type:       0, 1, 2
+Comments:
+
+
+
 Label:      Presence of Carmen (the tranny)
-Variable:
-Position:
-Type:       bool
+Variable:   charCarmen
+Position:   21
+Type:       0, 1, 2
 Comments:   http://www.imdb.com/character/ch0272755/?ref_=ttfc_fc_cl_t20
             Carmen is a male-to-female transsexual who Mac dated and was already deeply involved with before the bulge in Carmen's pants was pointed out to him. Despite Mac's embarrassment, Carmen was able to keep Mac interested by complimenting his physique and promising to undergo gender reassignment surgery.
 
 
+
 Label:      Presence of Charlie's Uncle Jack
-Variable:
-Position:
-Type:       bool
+Variable:   charUncleJack
+Position:   22
+Type:       0, 1, 2
 Comments:   http://www.imdb.com/character/ch0194210/?ref_=ttfc_fc_cl_t21
             Jack is Charlie's uncle, the brother of Charlie's mother, who is constantly implied to have molested Charlie as a child. Charlie's Uncle Jack is believed to be the inspiration for "Nightman," the character and subsequent musical Charlie created about a dark figure who comes at night and takes away a little boy's innocence. The boy grows up to become "Dayman," fighter of the Nightman.
 
 
 
-------------------------
+Label:      Presence of Lil Kev
+Variable:   charLilKev
+Position:   23
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0127827/?ref_=ttfc_fc_cl_t39
+
+
+
+Label:      Presence of Bruce Mathis
+Variable:   charBruce
+Position:   24
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0130136/?ref_=ttfc_fc_cl_t33
+
+
+
+Label:      Presence of Barbara Reynolds (Dee/Dennis' Mom)
+Variable:   charBarbara
+Position:   25
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0125888/?ref_=ttfc_fc_cl_t24
+
+
+
+Label:      Presence of Pop-Pop (Dee/Dennis' grandfather)
+Variable:   charPopPop
+Position:   26
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Gail the Snail
+Variable:   charGail
+Position:   27
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Z (From under the bridge)
+Variable:   charZ
+Position:   28
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Rex
+Variable:   charRex
+Position:   29
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0130134/?ref_=ttfc_fc_cl_t22
+
+
+
+Label:      Presence of Principal MacIntyre
+Variable:   charPrincipal
+Position:   30
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0231820/?ref_=ttfc_fc_cl_t25
+
+
+
+Label:      Presence of Brad Fisher
+Variable:   charBrad
+Position:   31
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0355925/?ref_=ttfc_fc_cl_t28
+
+
+
+Label:      Presence of Hwang (Charlie/Frank's landlord)
+Variable:   charHwang
+Position:   32
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0451833/?ref_=ttfc_fc_cl_t34
+
+
+
+Label:      Presence of Ingrid 'Fatty Magoo' Nelson
+Variable:   charIngrid
+Position:   33
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Da' Maniac
+Variable:   charManiac
+Position:   34
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Jackie Denardo (TV Anchor)
+Variable:   charJackie
+Position:   35
+Type:       0, 1, 2
+Comments:
+
+
+
+Label:      Presence of Duncan (from under the bridge)
+Variable:   charDuncan
+Position:   36
+Type:       0, 1, 2
+Comments:   http://www.imdb.com/character/ch0500568/?ref_=ttfc_fc_cl_t27
+
+
+------------------------------------------------------------------
 ACTIVITY INFO
-------------------------
+------------------------------------------------------------------
+* This data table is saved to activityInfo.csv
+
+TODO -- Once all variable have been created, group them based on variable type
+
+
+Drinking Beer:
+    Label:      Number of Beers drank by Dennis
+    Variable:   BeerDennis
+    Position:   2
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Beers drank by Dee
+    Variable:   BeerDee
+    Position:   3
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Beers drank by Mac
+    Variable:   BeerMac
+    Position:   4
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Beers drank by Charlie
+    Variable:   BeerCharlie
+    Position:   5
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Beers drank by Frank
+    Variable:   BeerFrank
+    Position:   6
+    Type:       int
+    Comments:
+
+
+
+Drinking Liquor:
+    Label:      Number of drinks drank by Dennis
+    Variable:   LiqDennis
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of drinks drank by Dee
+    Variable:   LiqDee
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of drinks drank by Mac
+    Variable:   LiqMac
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of drinks drank by Charlie
+    Variable:   LiqCharlie
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of drinks drank by Frank
+    Variable:   LiqFrank
+    Position:
+    Type:       int
+    Comments:
+
+
+
+Drinking Mixed drinks:
+    Label:      Number of Mixed drinks drank by Dennis
+    Variable:   MixedDennis
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Mixed drinks drank by Dee
+    Variable:   MixedDee
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Mixed drinks drank by Mac
+    Variable:   MixedMac
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Mixed drinks drank by Charlie
+    Variable:   MixedCharlie
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Mixed drinks drank by Frank
+    Variable:   MixedFrank
+    Position:
+    Type:       int
+    Comments:
+
+
+
+Drinking Wine:
+    Label:      Number of Glasses of Wine drank by Dennis
+    Variable:   WineDennis
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Glasses of Wine drank by Dee
+    Variable:   WineDee
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Glasses of Wine drank by Mac
+    Variable:   WineMac
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Glasses of Wine drank by Charlie
+    Variable:   WineCharlie
+    Position:
+    Type:       int
+    Comments:
+
+
+
+    Label:      Number of Glasses of Wine drank by Frank
+    Variable:   WineFrank
+    Position:
+    Type:       int
+    Comments:
+
+
+
+Drugs:
+    Label:      Members of the Gang that Huffed Glue
+    Variable:   Glue
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one huffs glue in a given episode
+
+
+    Label:      Members of the Gang that Smoked Crack
+    Variable:   Crack
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one smokes crack in a given episode
+
+
+    Label:      Members of the Gang that did Steroids
+    Variable:   Steroids
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one does steroids in a given episode
+
+
+    Label:      Members of the Gang that Smoked Weed
+    Variable:   Weed
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one smokes weed in a given episode
+
+
+    Label:      Members of the Gang that Ate Cat Food
+    Variable:   CatFood
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one eats cat food in a given episode
+
+
+    Label:      Members of the Gang take some other drug
+    Variable:   OtherDrug
+    Position:
+    Type:       String Array
+    Comments:
+                * Can contain 'Dennis' 'Dee' 'Mac' 'Charlie' 'Frank'
+                * Null if no one does any one of the following drugs in a given episode
+                    - Riterall
+                    - Oxycotin
+                    - Cocaine
+                    - Some type of sedative (e.g. sedative brownie)
+
+
+
+Label:      Charlie Getting Shutdown By Waitress
+Variable:   WaitressShutCharlie
+Position:
+Type:       int/bool?
+Comments:
+
+
+
+Label:      Waitress Getting Shutdown By Dennis
+Variable:   DennisShutWaitress
+Position:
+Type:       int/bool?
+Comments:
+
+
+
+Label:      Others Getting Shutdown By Charlie
+Variable:   CharlieShutOther
+Position:
+Type:       int/bool?
+Comments:
+
+
+
+Label:      Dennis Hitting on Women
+Variable:   DennisHit
+Position:
+Type:       int
+Comments:
+
+
+
+Label:      Mention or Utilization of the D.E.N.N.I.S. system
+Variable:   DENNISSystem
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Number of Times Dee is Referenced as a Bird
+Variable:   DeeBird
+Position:
+Type:       int
+Comments:
+
+
+
+Label:      Presence of Children
+Variable:   Children
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Does Frank bail the Gang Out?
+Variable:   FrankBail
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Is Dennis Vain?
+Variable:   DennisVain
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Presence/Reference to Green Man
+Variable:   GreenMan
+Position:
+Type:       0, 1, 2
+Comments:   0 = Green Man not present/referenced
+            1 = Green Man referenced, but not present
+            2 = Green Man present
+
+
+
+Label:      Allusions to Mac Being Gay
+Variable:   MacGay
+Position:
+Type:       bool/int?
+Comments:
+            * This may be difficult to quantify with the exact number of times he was gay.  Might want to just classify episodes as a bool on whether any allusions were made at all
+
+
+
+Label:      The Gang Makes it About Patriotism
+Variable:   Patriotism
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+Label:
+Variable:
+Position:
+Type:
+Comments:
+
+
+
+
+
+
+
 
 ------------------------
 GANG ALLEGIANCE INFO
 ------------------------
+* Allegiance info is proving exceedingly difficult to record.  Oftentimes allegiances will form around a certain stance (e.g. whether or not to allow underage kids in the bar) but will then evolve over the course of an episode to some other being centered on some other issue (e.g. over whether to go to the high school prom)
