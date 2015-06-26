@@ -909,19 +909,19 @@ Comments:
 
 
 
-Label:      Dee's Dream of Being an Actor
+Label:      Mention of Dee's Dream of Being an Actor
 Variable:   DeeActor
 Position:
 Type:       bool
 Comments:
             * Includes Dee acting as well as mention of her dreams or aspirations of becoming an actor
-            
 
 
-Label:
-Variable:
+
+Label:      Is Dee Dating Anyone?
+Variable:   DeeBoyfriend
 Position:
-Type:
+Type:       bool
 Comments:
 
 
