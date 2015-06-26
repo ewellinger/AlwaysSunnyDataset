@@ -5,13 +5,23 @@
 library(jsonlite); library(curl)
 
 # We now need to load in the currently empty generalInfo.csv file
+# This assumes this file already exists, I should change it to check for the existance of this file and, if not, create a new data frame with the proper column headers.
+# This still isn't quite working...  The ones classified as characters don't work, they just throw NA for all of them...
 setwd("/Users/ewellinger/Git/AlwaysSunnyDataset")
-generalInfo <- read.csv('generalInfo.csv')
+if (file.exists('generalInfo.csv')) {
+  generalInfo <- read.csv('generalInfo.csv')
+} else {
+  generalInfo <- data.frame('AbsOrder'=integer(0),'SeaNum'=integer(0),'EpiNum'=integer(0),
+                            'EpiTitle'=(0),'AirDate'=(0),'WritBy',
+                            'DirBy','EpiPlot','imdbRating'=numeric(0),
+                            'imdbVotes'=numeric(0),'EpiLength')
+}
+
 
 
 # This will loop through all episodes of the series (given that there are 113 episodes at the time of creating this)
 seaNum <- 1; epiNum <- 1
-for (n in 1:113) {
+for (n in 1:4) {
   absNum <- n
   episodeURL <- paste("http://www.omdbapi.com/?t=It's%20Always%20Sunny%20in%20Philadelphia&Season=",
                       seaNum, "&Episode=", epiNum, sep="")
@@ -39,12 +49,10 @@ for (n in 1:113) {
 
 # We now want to remove the string "Rob McElhenney (developer), Glenn Howerton (developer), Rob McElhenney (creator), " from the WritBy
 replacePattern <- "Rob McElhenney \\(developer\\), Glenn Howerton \\(developer\\), Rob McElhenney \\(creator\\), "
-WritBy  <- as.data.frame(mapply(gsub, replacePattern, "", generalInfo$WritBy))
-generalInfo[,6] <- WritBy
-# Now do the same with the string "Rob McElhenney (developed by), Glenn Howerton (developed by), Rob McElhenney (created by), " which shows up only in Season 10 Writen By information...
+generalInfo[,6]  <- as.data.frame(mapply(gsub, replacePattern, "", generalInfo$WritBy))
+# Now do the same with the string "Rob McElhenney (developed by), Glenn Howerton (developed by), Rob McElhenney (created by), " which shows up only in the Season 10 Writen By information...
 replacePattern <- "Rob McElhenney \\(developed by\\), Glenn Howerton \\(developed by\\), Rob McElhenney \\(created by\\), "
-WritBy  <- as.data.frame(mapply(gsub, replacePattern, "", generalInfo$WritBy))
-generalInfo[,6] <- WritBy
+generalInfo[,6] <- as.data.frame(mapply(gsub, replacePattern, "", generalInfo$WritBy))
 
 # Now that we have the table made, we can save it back as a CSV file
 write.csv(generalInfo, file="generalInfo.csv")

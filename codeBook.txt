@@ -705,11 +705,12 @@ Comments:
 
 
 
-Label:      Is Dennis Vain?
+Label:      Number of Instances that Dennis is Vain
 Variable:   DennisVain
 Position:
-Type:       bool
+Type:       int
 Comments:
+            * Might want to just have this one be a bool
 
 
 
@@ -740,68 +741,181 @@ Comments:
 
 
 
-Label:
-Variable:
+Label:      Reference to Night Crawlers
+Variable:   NightCrawl
 Position:
-Type:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Dee's Car Gets Ruined
+Variable:   DeeCar
 Position:
-Type:
+Type:       bool
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Mac Showing Off His Karate Skills
+Variable:   MacKarate
 Position:
-Type:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Dee Calling Someone a Turkey
+Variable:   DeeTurkey
 Position:
-Type:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Mention of Nightman / Dayman
+Variable:   NightDayMan
 Position:
-Type:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Someone Wears Black Face
+Variable:   BlackFace
 Position:
-Type:
+Type:       bool
+Comments:   Eh, might want to cut this one
+
+
+
+Label:      References to Charlie's Illiteracy
+Variable:   CharlieIlliteracy
+Position:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      Use of Ocular Pat Down
+Variable:   OcularPat
 Position:
-Type:
+Type:       int
 Comments:
 
 
 
-Label:
-Variable:
+Label:      References to Frank's Vietnamese Connections
+Variable:   FrankViet
 Position:
-Type:
+Type:       int
 Comments:
 
+
+
+Label:      Number of God-Damnits
+Variable:   GodDamn
+Position:
+Type:       int
+Comments:
+            * Might want to separate this for each character?
+
+
+
+Label:      Gang Sings A Capella
+Variable:   Acapella
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Mention of Dennis' Sex Tapes
+Variable:   DennisSex
+Position:
+Type:       int
+Comments:
+
+
+
+Label:      Mention of Operation Badass
+Variable:   OpBadass
+Position:
+Type:       bool
+Comments:
+            * I'm not really sure how often this comes up, might want to cut this
+
+
+
+Label:      Uncle Jack Referencing Hands
+Variable:   UncleJackHands
+Position:
+Type:       int
+Comments:
+            * This one is also up for culling
+
+
+
+Label:      Mention of Bird Law
+Variable:   BirdLaw
+Position:
+Type:       int
+Comments:
+
+
+
+Label:      Charlie Being a "Lawyer"
+Variable:   CharlieLawyer
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Reference to Philadelphia Sports Team
+Variable:   PhilSports
+Position:
+Type:       String Array
+Comments:
+            * Can contain 'Eagles' 'Flyers' 'Phillies'
+            * Null if no sports teams are mentioned
+
+
+
+Label:      Presence of Guns in the Episode
+Variable:   Guns
+Position:
+Type:       int
+Comments:
+            * Maybe make this a bool?
+
+
+
+Label:      T-Shirts
+Variable:
+Position:
+Type:       ?
+Comments:
+            * I don't know if we'll end up including this one in the final dataset, might just keep it in the excel sheet as I'm collecting the data until we know what we're doing with it.
+            * Maybe break it down by the Character wearing it?  Really only care about Charlie and Mac though...
+
+
+
+Label:      Mention of Charlie Work
+Variable:   CharlieWork
+Position:
+Type:       bool
+Comments:
+
+
+
+Label:      Dee's Dream of Being an Actor
+Variable:   DeeActor
+Position:
+Type:       bool
+Comments:
+            * Includes Dee acting as well as mention of her dreams or aspirations of becoming an actor
+            
 
 
 Label:

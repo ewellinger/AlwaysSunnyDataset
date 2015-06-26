@@ -3,35 +3,11 @@
 * Need to come up with ideas for what variables we'll be tracking and the data types (i.e. bool, bin, int, string)
 
 
-    * Scamming people
-
-    * Frank's vietnamese connections
-    * Night crawlers
-    * The gang stabbing each other in the back
-    * Gang threatens someone
-
-    * Dee's car getting ruined
-    * Mac's karate skills (sound effects?)
-    * Ocular pat down
     * T-Shirts (Kentucky shirts)
         - Maybe breakdown by Charlie and Mac
-    * Number of God-damnnits
     * Charlie's illiteracy  // TODO: quantify Charlie's illiteracy
     * Number of times the gang threatens someone // int threat should be associated with who made it / who was threatened. Possibly recorded as Tuple?
         - int
-    * Uncle Jack referencing hands
-    * Bird law / Charlie being a lawyer
-    * Reference to Philadelphia sports team
-        - Eagles, Flyers, and Phillies
-    * Guns
-    * Mention Dennis' sex tapes
-    * Operation Badass
-    * Gang sings a capella
-    * Black face?
-    * Dee calls someone a turkey
-    * Mention of Dayman / Nightman
     * Breakdown of the allegiances within the gang
 
-    * Green Man (Might want to put this into character info)
-        - Is green man a character or simply an activity for Charlie?
-        - Which came first; the chicken or the egg?
+    * Dee wanting to become an actor
